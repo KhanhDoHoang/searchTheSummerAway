@@ -1,14 +1,24 @@
 {
   "name": "searchthesummeraway",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "homepage": "https://khanhdohoang.github.io/SearchTheSummerAway",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Khanh & Reilly",
   "license": "MIT",
   "dependencies": {
     "gh-pages": "^3.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhanhDoHoang/searchTheSummerAway.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KhanhDoHoang/searchTheSummerAway/issues"
+  },
+  "description": ""
 }
