@@ -8,32 +8,123 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
     <title>Search The Summer Away</title>
 </head>
 
 <body>
+    <img class="logo" src="./media/LogoSun.png">
     <header>
-        <h1>Todo List</h1>
+        <h1>Pick your activities</h1>
     </header>
 
+
     <form>
-        <input type="text" class="todo-input" />
-        <button class="todo-button" type="submit">
-            <i class="fas fa-plus-square"></i>
-        </button>
-        <div class="select">
-            <select name="todos" class="filter-todo">
-                <option value="all">All</option>
-                <option value="completed">Completed</option>
-                <option value="uncompleted">Uncompleted</option>
-            </select>
+        <div class="popup" onclick="myFunction()">Click me!
+            <!-- <span class="popuptext" id="myPopup">Popup text...</span> -->
+            <div class="popupCard" id="yourPopup">
+                <div class="card1">
+                    <div class="cardimg card-image"></div>
+                    <div class="cardtext card-text">
+                        <span class="date"></span><br><br>
+                        <h2>Title: Camping</h2><br>
+                        <p>
+                            Desc : Explore camping in nature. Just becareful of the bugs.
+                        </p>
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="cardimg card-image"></div>
+                    <div class="cardtext card-text">
+                        <span class="date"></span><br><br>
+                        <h2>Title: Learn a new language</h2><br>
+                        <p>
+                            Desc: For those who want something more productive, pickup a new language.
+                        </p>
+                    </div>
+                </div>
+                <div class="card3">
+                    <div class="cardimg card-image"></div>
+                    <div class="cardtext card-text">
+                        <span class="date"></span><br><br>
+                        <h2>Title: Learn a new language</h2><br>
+                        <p>
+                            Desc: For those who want something more productive, pickup a new language.
+                        </p>
+                    </div>
+                </div>
+                <div class="card4">
+                    <div class="cardimg card-image"></div>
+                    <div class="cardtext card-text">
+                        <span class="date"></span><br><br>
+                        <h2>Title: Learn a new language</h2><br>
+                        <p>
+                            Desc: For those who want something more productive, pickup a new language.
+                        </p>
+                    </div>
+                </div>
+                <div class="card5">
+                    <div class="cardimg card-image"></div>
+                    <div class="cardtext card-text">
+                        <span class="date"></span><br><br>
+                        <h2>Title: Learn a new language</h2><br>
+                        <p>
+                            Desc: For those who want something more productive, pickup a new language.
+                        </p>
+                    </div>
+                </div>
+                <div class="card6">
+                    <div class="cardimg card-image"></div>
+                    <div class="cardtext card-text">
+                        <span class="date"></span><br><br>
+                        <h2>Title: Learn a new language</h2><br>
+                        <p>
+                            Desc: For those who want something more productive, pickup a new language.
+                        </p>
+                    </div>
+                </div>
+                <div class="card7">
+                    <div class="cardimg card-image"></div>
+                    <div class="cardtext card-text">
+                        <span class="date"></span><br><br>
+                        <h2>Title: Learn a new language</h2><br>
+                        <p>
+                            Desc: For those who want something more productive, pickup a new language.
+                        </p>
+                    </div>
+                </div>
+                <div class="card9">
+                    <div class="cardimg card-image"></div>
+                    <div class="cardtext card-text">
+                        <span class="date"></span><br><br>
+                        <h2>Title: Learn a new language</h2><br>
+                        <p>
+                            Desc: For those who want something more productive, pickup a new language.
+                        </p>
+                    </div>
+                </div>
+                <div class="card10">
+                    <div class="cardimg card-image"></div>
+                    <div class="cardtext card-text">
+                        <span class="date"></span><br><br>
+                        <h2>Title: Learn a new language</h2><br>
+                        <p>
+                            Desc: For those who want something more productive, pickup a new language.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 
     <div class="todo-container">
         <ul class="todo-list"></ul>
     </div>
+
+    <div class="todo"></div>
 
     <script src="./effect.js"></script>
 </body>

@@ -4,11 +4,30 @@
     box-sizing: border-box;
 }
 
+.logo {
+    width: 150px;
+    left: 2rem;
+    top: 2rem;
+}
+
+
 body {
-    background-image: linear-gradient(120deg, #e2c35d, #d88771);
-    color: white;
-    font-family: "Antic Slab", sans-serif;
+    background-image: url(./media/1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #ffffff;
+    display: block;
+    /* background-image: linear-gradient(120deg, #4be297, #86eee9); */
+    color: black;
+    font-family: "Architects Daughter", sans-serif;
     min-height: 100vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+html {
+    /* overflow: hidden; */
 }
 
 header {
@@ -17,124 +36,114 @@ header {
 
 header,
 form {
-    min-height: 20vh;
+    min-height: 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form input,
-form button {
-    padding: 0.5rem;
-    font-size: 2rem;
-    border: none;
-    background: white;
-}
-
-form button {
-    color: #d88771;
-    background: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-form button:hover {
-    background: #d88771;
-    color: white;
-}
-
-.todo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.todo-list {
-    min-width: 30%;
-    list-style: none;
-}
-
-.todo {
-    margin: 0.5rem;
-    background: white;
-    color: black;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.5s ease;
-}
-
-.todo li {
-    flex: 1;
-}
-
-.trash-btn,
-.complete-btn {
-    background: #ff6f47;
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.complete-btn {
-    background: rgb(94, 201, 94);
-}
-
-.todo-item {
-    padding: 0rem 0.5rem;
-}
-
-.fa-trash,
-.fa-check {
-    pointer-events: none;
-}
-
-.completed {
-    text-decoration: line-through;
-    opacity: 0.5;
-}
-
-.fall {
-    transform: translateY(8rem) rotateZ(20deg);
-    opacity: 0;
-}
-
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    border: none;
-}
-
-.select {
-    margin: 1rem;
+.popup {
     position: relative;
-    overflow: hidden;
-}
-
-select {
-    color: #ff6f47;
-    width: 10rem;
+    display: inline-block;
     cursor: pointer;
-    padding: 1rem;
-}
-
-.select::after {
-    content: "\25BC";
-    position: absolute;
-    background: #ff6f47;
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.select:hover::after {
     background: white;
-    color: #ff6f47;
+
+    height: 3rem;
+    width: 200px;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 20px;
+}
+
+.popup:hover {
+    background: none;
+    border: 1px solid black;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext,
+.popup .popupCard {
+    visibility: hidden;
+    /* width: 160px; */
+    /* background-color: #555; */
+    /* color: #fff; */
+    text-align: center;
+    /* border-radius: 6px; */
+    /* padding: 8px 0; */
+    position: absolute;
+    z-index: 1;
+    top: -5%;
+    left: 50%;
+    margin-left: -150px;
+    font-size: 15px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after,
+.popup .popupCard::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    /* left: 20%; */
+    margin-left: 400px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.card1 {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 220px 100px;
+    grid-template-areas: "image""text""stats";
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px black;
+    text-align: center;
+}
+
+.card-image {
+    grid-area: image;
+    background-image: url(./media/camping.jpg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+
+.card-text {
+    grid-area: text;
+}
+
+.card-stats {
+    grid-area: stats;
 }
